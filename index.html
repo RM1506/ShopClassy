@@ -353,6 +353,49 @@
             <p>Made By Rishabh Mishra | Copyright &copy ShopClassy 2023 </p>
           </footer>
         
-           
+           <script>
+
+            document.querySelector("nav #menu-btn").addEventListener('click', function () {
+              document.querySelector("nav ul").classList.toggle("active");
+              document.querySelector("nav #menu-btn").classList.toggle("active");
+        
+            });
+            let searchInput = document.getElementById('searchInput');
+            let searchform = document.querySelector('nav .search');
+            searchform.addEventListener('submit', function (e) {
+              let value = searchInput.value;
+              e.preventDefault();
+        
+              if (value == "cricket" || value == "bat" || value == "bowl" || value == "cricket product") {
+                document.getElementById("cricketProduct").scrollIntoView({ behavior: "smooth" });
+                document.querySelector("nav ul").classList.remove("active");
+                document.querySelector("nav #menu-btn").classList.remove("active");
+                searchform.reset();
+        
+              }
+              else if (value == "phone" || value == "mobile" || value == "Mobile" || value == "iphone" || value == "samsung") {
+                document.getElementById("mobilePhone").scrollIntoView({ behavior: "smooth" });
+                document.querySelector("nav ul").classList.remove("active");
+                document.querySelector("nav #menu-btn").classList.remove("active");
+                searchform.reset();
+              }
+              else if (value == "clothes" || value == "mens cloth" || value == "shirts" || value == "tshirts" || value == "pants" || value == "jeans") {
+                document.getElementById("mensClothes").scrollIntoView({ behavior: "smooth" });
+                document.querySelector("nav ul").classList.remove("active");
+                document.querySelector("nav #menu-btn").classList.remove("active");
+                searchform.reset();
+              }
+              else if (value == "toys" || value == "Toys" || value == "children toys" || value == "children") {
+                document.getElementById("Toys").scrollIntoView({ behavior: "smooth" });
+                document.querySelector("nav ul").classList.remove("active");
+                document.querySelector("nav #menu-btn").classList.remove("active");
+                searchform.reset();
+              }
+              else {
+                alert("item not found");
+              }
+            });
+        
+          </script> 
 </body>
 </html>
